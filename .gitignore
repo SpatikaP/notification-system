@@ -3,4 +3,3 @@
 *.tfstate.backup
 *.tfvars
 *.lock.hcl
-*.py
