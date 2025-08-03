@@ -12,15 +12,11 @@ This project sets up a notification system using:
 ## Architecture Overview
 
 ```
-
- +------------+        +---------------------+        +-------------------------+
-\|            |        |                     |        |                         |
-\|  Trigger   +------->+  AWS Lambda (exec)  +------->+  SNS Topic: 'notifier'  |
-\| (manual/   |        |                     |        |                         |
-\|  scheduled)|        +----------+----------+        +-------------------------+
-|
-\| IAM Role with sns\:Publish
-|
+ +------------+        +-------------------------------+        +-------------------------+
+ |            |        |                               |        |                         |
+ |  Trigger   +------->+  AWS Lambda (data-ingestion)  +------->+  SNS Topic: 'notifier'  |
+ |            |        |                               |        |                         |
+ +------------+        +-------------------------------+        +-------------------------+
 
 ```
 
