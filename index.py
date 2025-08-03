@@ -10,7 +10,7 @@ topic_arn = os.environ['SNS_TOPIC_ARN']
 
 def handler(event, context):
     try:
-        response = urllib.request.urlopen("https://official-joke-api.appspot.com/random_joke")
+        response = urllib.request.urlopen("https://official-joke-api.appspot.com/random_joke") # Use the data-ingestion api
         return {"message": "Success!"}
     except urllib.error.URLError as e:
         error_message = {
