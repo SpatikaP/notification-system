@@ -13,9 +13,9 @@ This project sets up a notification system using:
 
 ```
 
-+------------+        +---------------------+        +-------------------------+
+ +------------+        +---------------------+        +-------------------------+
 \|            |        |                     |        |                         |
-\|  Trigger   +------->+  AWS Lambda (exec)  +------->+  SNS Topic: 'notifier' |
+\|  Trigger   +------->+  AWS Lambda (exec)  +------->+  SNS Topic: 'notifier'  |
 \| (manual/   |        |                     |        |                         |
 \|  scheduled)|        +----------+----------+        +-------------------------+
 |
