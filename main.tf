@@ -20,3 +20,11 @@ module "sns" {
   topic_name        = var.sns_topic_name
   subscriber_emails = var.subscriber_emails
 }
+
+module "eventbridge" {
+  source        = "./modules/eventbridge"
+  rule_name     = var.rule_name
+  schedule_cron = var.schedule_cron
+  lambda_arn    = module.lambda.lambda_function_arn
+  lambda_name   = var.lambda_function_name
+}

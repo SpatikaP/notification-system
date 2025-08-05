@@ -11,3 +11,7 @@ variable "lambda_filename" {}
 variable "subscriber_emails" {}
 
 variable "sns_topic_name" {}
+
+variable "rule_name" {}
+
+variable "schedule_cron" {}
